@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{ width: 300px; background: red; padding: 20px; color: yellow; border: 10px solid #ccc;}
+        .yellow{ width: 500px; background: yellow; padding: 10px; color: red; border: 20px solid #444;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var oBtn3 = document.getElementById('btn3');
+            var oBtn4 = document.getElementById('btn4');
+            var oP = document.getElementById('p1');
+
+            var num = 15;
+
+            oBtn1.onclick = function () {
+                if (num>12){
+                    num -= 1;
+                    oP.style.fontSize = num + 'px';
+                }
+            };
+
+            oBtn2.onclick = function () {
+                if (num<22){
+                    num += 1;
+                    oP.style.fontSize = num + 'px';
+                }
+            };
+
+            oBtn3.onclick = function () {
+                oP.className = 'red';
+            };
+
+            oBtn4.onclick = function () {
+                oP.className = 'yellow';
+            };
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="-" />
+<input id="btn2" type="button" value="+" />
+<input id="btn3" type="button" value="红" />
+<input id="btn4" type="button" value="黄" />
+<p id="p1">八百标兵奔北坡，北坡炮兵并排跑。炮兵怕把标兵碰，标兵怕碰炮兵炮。</p>
+</body>
+</html>
