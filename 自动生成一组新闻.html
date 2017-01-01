@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    window.onload = function () {
+        var oBtn = document.getElementById('btn1');
+        var oUl = document.getElementById('list');
+        var arr = ['中国海军战机紧急起飞拦截和外逼日军飞机视频曝光',
+            '外管局回应个人年度购汇额度5万美元是否有调整',
+            '第二批中央环保督察共受理举报2.6万件 举报标题党',
+            '中纪委：2016年前11月处分33.7万人追赃23.12亿',
+            '国五标准汽柴油1日起全国上市 93和97号汽油停售'];
+        var onOff = true;
+        oBtn.onclick = function () {
+            if(onOff) {
+                for (var i = 0; i < arr.length; i++) {
+                    oUl.innerHTML += '<li>' + arr[i] + '</li>'
+                }
+                onOff = false;
+            }
+        }
+    };
+</script>
+<body>
+<input id="btn1" type="button" value="自动生成5条新闻" />
+<ul id="list">
+
+</ul>
+</body>
+</html>
