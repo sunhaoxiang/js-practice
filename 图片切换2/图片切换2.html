@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    ul{ padding: 0; margin: 0;}
+    li{ list-style: none;}
+    body{ background: #333;}
+    #pic{ width: 400px; height: 500px; position: relative; margin: 0 auto; background: url("img/loader_ico.gif") no-repeat center #fff;}
+    #pic img{ width: 400px; height: 500px;}
+    #pic ul{ width: 40px; position: absolute; top: 0; right: -50px;}
+    #pic li{ width: 40px; height: 40px; margin-bottom: 4px; background: #666;}
+    #pic .active{ background: #fc3;}
+    #pic span{ top: 0;}
+    #pic p{ bottom: 0; margin: 0;}
+    #pic p, #pic span{ position: absolute; left: 0; width: 400px; height: 30px; line-height: 30px; text-align: center; color: #fff; background: #000;}
+</style>
+<script>
+    window.onload = function () {
+        var oDiv = document.getElementById('pic');
+        var oImg = document.getElementsByTagName('img')[0];
+        var oSpan = document.getElementsByTagName('span')[0];
+        var oP = document.getElementsByTagName('p')[0];
+        var oUl = document.getElementsByTagName('ul')[0];
+        var aLi = document.getElementsByTagName('li');
+        var arrUrl = ['img/1.png','img/2.png','img/3.png','img/4.png'];
+        var arrText = ['图片一','图片二','图片三','图片四'];
+        var num = 0;
+        var oldLi = null;
+
+        for(var i=0;i<arrUrl.length;i++){
+            oUl.innerHTML += '<li></li>';
+        }
+        oldLi = aLi[num];
+
+        oImg.src = arrUrl[num];
+        oSpan.innerHTML = 1+num+'/'+arrUrl.length;
+        oP.innerHTML = arrText[num];
+        aLi[num].className = 'active';
+
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function () {
+                oImg.src = arrUrl[this.index];
+                oP.innerHTML = arrText[this.index];
+                oSpan.innerHTML = 1+this.index+'/'+arrUrl.length;
+                oldLi.className = '';
+                oldLi = this;
+                this.className = 'active';
+            }
+        }
+
+    }
+</script>
+<body>
+<div id="pic">
+    <img src="" />
+    <span>数量正在加载中……</span>
+    <p>文字说明正在加载中……</p>
+    <ul>
+    </ul>
+</div>
+</body>
+</html>

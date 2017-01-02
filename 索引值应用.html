@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var aBtn = document.getElementsByTagName('input');
+            var aP = document.getElementsByTagName('p');
+            var arr = ['张三','李四','王五'];
+            for(var i=0;i<aBtn.length; i++){
+                aBtn[i].index = i;
+                aBtn[i].onclick = function () {
+                    this.value = arr[this.index];
+                    aP[this.index].innerHTML = arr[this.index];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="btn1" />
+<input type="button" value="btn2" />
+<input type="button" value="btn3" />
+<p>1</p>
+<p>2</p>
+<p>3</p>
+</body>
+</html>
