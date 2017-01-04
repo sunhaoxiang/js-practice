@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+
+            for(var i=0;i<aLi.length;i++){
+                fn1(aLi[i]);
+            }
+
+            function fn1(oLi) {
+                var aBtn = oLi.getElementsByTagName('input');
+                var oStrong = oLi.getElementsByTagName('strong')[0];
+                var oEm = oLi.getElementsByTagName('em')[0];
+                var oSpan = oLi.getElementsByTagName('span')[0];
+                var n1 = Number(oStrong.innerHTML);
+                var n2 = parseFloat(oEm.innerHTML);
+
+                aBtn[0].onclick = function () {
+                    n1--;
+                    if(n1<0){
+                        n1 = 0;
+                    }
+                    oStrong.innerHTML = n1;
+                    oSpan.innerHTML = n1 * n2 + '元';
+
+                };
+                aBtn[1].onclick = function () {
+                    n1++;
+                    oStrong.innerHTML = n1;
+                    oSpan.innerHTML = n1 * n2 + '元';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价: <em>12.5元</em>
+        小计: <span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价: <em>10.5元</em>
+        小计: <span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价: <em>8.5元</em>
+        小计: <span>0元</span>
+    </li>
+</ul>
+</body>
+</html>
