@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="阿里字体/iconfont.css" />
+    <style>
+        * { margin: 0; padding: 0; }
+        .container {width: 550px; height: 60px; margin: 50px auto;}
+        .Lbox {margin-left: 10px; line-height: 60px; float: left;}
+        .Lbox .ico {vertical-align:7px;}
+        .Lbox .txt { float: left; }
+        .container #ibox i {cursor: pointer; float: left; padding-right: 3px;}
+        .container .Lbox p {color: #f66; }
+        #img { float: left; margin: 10px 0 0 5px;}
+        .iconfont{font-family:"iconfont"; font-size:22px; font-style:normal;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBox = document.getElementById('ibox');
+            var aI = document.getElementsByTagName('i');
+            var oImg = document.getElementById('img');
+            var oP = document.getElementsByTagName('p')[0];
+            var arrText = ['很差','较差','还行','推荐','力荐'];
+            var num = 0;
+            var nu = 0;
+            var oPen = false;
+
+            function fnOver() {
+                oImg.style.display = 'none';
+                oP.style.display = 'inline';
+                oP.innerHTML = arrText[num];
+            }
+
+            function fnOut() {
+                oImg.style.display = 'block';
+                oP.style.display = 'none';
+            }
+
+            function fnOverStar(num) {
+                if(num<2){
+                    for(var i=0;i<num+1;i++){
+                        aI.innerHTML = '&#xe673';
+                    }
+                    fnOver();
+                }
+
+                if(num>1 && num<aI.length){
+                    for(var i=0; i<num+1; i++){
+                        aI[i].innerHTML = '&#xe673';
+                        aI[i].style.color = '#f7b500';
+                    }
+                    fnOver();
+                }
+            }
+
+            for(var i=0;i<aI.length;i++){
+                aI[i].index = i;
+                aI[i].onmouseover = function () {
+                    num = this.index;
+                    for(var i=0;i<aI.length;i++){
+                        aI[i].innerHTML = '&#xe63a';
+                        aI[i].style.color = '';
+                    }
+                    fnOverStar(num);
+                };
+
+                aI[i].onclick = function () {
+                    nu = this.index;
+                    oPen = true;
+                };
+
+                aI[i].onmouseout=function(){
+                    if(oPen){
+                        for(var i=nu+1; i<aI.length; i++){
+                            aI[i].innerHTML = '&#xe63a;';
+                            aI[i].style.color = '';
+                        }
+                        if(nu<2){
+                            for(var i=0; i<aI.length; i++){
+                                aI[i].style.color = '';
+                            }
+                        }
+                        fnOverStar(nu);
+                        oP.innerHTML = arrText[nu];
+                    }else{
+                        for(var i=0; i<aI.length; i++){
+                            aI[i].innerHTML = '&#xe63a;';
+                            aI[i].style.color = '';
+                        }
+                        fnOut();
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="Lbox">
+        <span class="txt"><img src="1s.png" class="ico">总体评价：</span>
+        <span id="ibox">
+            <i class="iconfont">&#xe63a;</i>
+            <i class="iconfont">&#xe63a;</i>
+            <i class="iconfont">&#xe63a;</i>
+            <i class="iconfont">&#xe63a;</i>
+            <i class="iconfont">&#xe63a;</i>
+        </span>
+        <p></p>
+    </div>
+    <img src="1l.png" id="img">
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ width: 100px; height: 100px; background: red;}
+    </style>
+    <script>
+        window.onload = function () {
+          $('btn1').onclick = function () {
+              $('div1').style.backgroundColor = 'blue';
+          }
+        };
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="按钮" />
+<div id="div1"></div>
+</body>
+</html>
