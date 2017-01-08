@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{ background: url("img/sina.png") no-repeat center 0; text-align: center;}
+        img{display: none;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oAd = document.getElementById('ad');
+
+            setTimeout(function () {
+                oAd.style.display = 'inline-block';
+                setTimeout(function () {
+                    oAd.style.display = 'none';
+                },3000)
+            },3000)
+        }
+    </script>
+</head>
+<body>
+<img id="ad" src="img/ad.png" />
+</body>
+</html>

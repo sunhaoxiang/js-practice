@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var aBtn =document.getElementsByTagName('input');
+            var arrUrl = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+            var num = 0;
+            var oBody = document.body;
+            var timer = null;
+
+            aBtn[0].onclick = function () {
+                clearInterval( timer );
+                timer = setInterval(function () {
+                    oBody.style.background = 'url(' + arrUrl[num] + ')';
+                    num++;
+                    num%=arrUrl.length;
+                },2000);
+            };
+            aBtn[1].onclick = function () {
+                clearInterval( timer );
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="换背景吧" />
+<input type="button" value="停" />
+</body>
+</html>
