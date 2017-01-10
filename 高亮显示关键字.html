@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p { border:10px solid #ccc; background:#FFC; width:400px; padding:20px; font-size:16px; font-family:微软雅黑; }
+        span { background:yellow; }
+    </style>
+    <script>
+        window.onload = function () {
+            var aInp = document.getElementsByTagName('input');
+            var oP = document.getElementsByTagName('p')[0];
+            
+            aInp[2].onclick = function () {
+                var str = aInp[0].value;
+                var newStr = aInp[1].value;
+
+                if(!str) return;
+                oP.innerHTML = oP.innerHTML.split(str).join('<span>'+newStr+'</span>');
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" />
+<input type="text" />
+<input type="button" value="替换" />
+<p>2016年苹果公司在App Store营收的是285亿美元的话，这部分营收的增速达到约42.5%，而同期iPhone和iPad的销量是在下滑的。也就是说iPhone销量下滑没有影响到用户在App Store的踊跃购买，App Store营收得以保持一个不错的增长速度。开发者2016年能从苹果公司App Store获得200亿美元左右的分成，虽然这些分成很多流向了游戏公司或者大科技公司的应用，不过App Store的分成生态的确是最好的，开发者、苹果公司和用户都玩的很开心。</p>
+</body>
+</html>
