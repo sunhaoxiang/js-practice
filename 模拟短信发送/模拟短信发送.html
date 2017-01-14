@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var oPic = document.getElementById('pic');
+            var oBtn = document.getElementById('btn');
+            var oText = document.getElementById('text');
+            var oCont = document.getElementById('cont');
+            var onOff = true;
+
+            oPic.onclick = function () {
+                if (onOff){
+                    oPic.src =  'img/2.png';
+                } else {
+                    oPic.src =  'img/1.png';
+                }
+                onOff = !onOff;
+            };
+
+            oBtn.onclick = function () {
+                if (onOff){
+                    oCont.innerHTML += '<li class="fl clearfix"><img src="img/1.png"/><p>'+oText.value+'</p></li>';
+                }else{
+                    oCont.innerHTML += '<li class="fr clearfix"><img src="img/2.png"/><p>'+oText.value+'</p></li>';
+                }
+                oText.value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <div class="box_cont">
+        <ul id="cont">
+        </ul>
+        <form class="more">
+            <s id="people">
+                <img src="img/1.png" id="pic">
+            </s>
+            <input type="text" id="text" />
+            <input type="button" id="btn" value="发送"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
