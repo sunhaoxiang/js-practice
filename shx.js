@@ -1,3 +1,4 @@
+//运动
 function doMove ( obj, attr, dir, target, endFn ) {
 	
 	dir = parseInt(getStyle( obj, attr )) < target ? dir : -dir;
@@ -21,6 +22,7 @@ function doMove ( obj, attr, dir, target, endFn ) {
 	}, 30);
 }
 
+//抖动
 function shake(obj,attr) {
     if(obj.onOff) return;
     obj.onOff = true;
@@ -44,8 +46,21 @@ function shake(obj,attr) {
     },50)
 }
 
+//补齐两位
 function toTwo ( n ) {
     return n < 10 ?  '0' + n : '' + n;
 }
 
+//获取绝对位置
+function getPos(obj) {
+    var pos = {left:0, top:0};
+    while (obj) {
+        pos.left += obj.offsetLeft;
+        pos.top += obj.offsetTop;
+        obj = obj.offsetParent;
+    }
+    return pos;
+}
+
 function getStyle ( obj, attr ) { return obj.currentStyle?obj.currentStyle[attr] : getComputedStyle( obj )[attr]; }
+

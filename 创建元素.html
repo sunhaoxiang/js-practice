@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function() {
+
+            var oText = document.getElementById('text1');
+            var oBtn = document.getElementById('btn');
+            var oUl = document.getElementById('ul1');
+
+            oBtn.onclick = function() {
+
+                var oLi = document.createElement('li');
+
+                oLi.innerHTML = oText.value;
+
+                var oA = document.createElement('a');
+                oA.innerHTML = '删除';
+                oA.href = 'javascript:;';
+                oA.onclick = function() {
+
+
+                    oUl.removeChild( this.parentNode );
+
+                };
+
+                oLi.appendChild( oA );
+
+
+                if ( oUl.children[0] ) {
+                    oUl.insertBefore( oLi, oUl.children[0] );
+                } else {
+                    oUl.appendChild( oLi );
+                }
+
+                oText.value = '';
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="text1" /><input type="button" value="留言" id="btn" />
+<ul id="ul1"></ul>
+</body>
+</html>
