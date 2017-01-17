@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var data = [
+                {id:1,username:'小张',sex:'男'},
+                {id:2,username:'小王',sex:'女'},
+                {id:3,username:'小李',sex:'男'},
+                {id:4,username:'小赵',sex:'女'}
+                ];
+
+            var oTab = document.getElementById('tab1');
+            var oTbody = oTab.tBodies[0];
+
+            for (var i = 0; i < data.length; i++) {
+                var oTr = document.createElement('tr');
+                var oTd = document.createElement('td');
+
+                oTd.innerHTML = data[i].id;
+                oTr.appendChild(oTd);
+
+                if (i%2==0) {
+                    oTr.style.background = 'white';
+                } else {
+                    oTr.style.background = 'gray';
+                }
+
+                oTd = document.createElement('td');
+                oTd.innerHTML = data[i].username;
+                oTr.appendChild(oTd);
+
+                oTd = document.createElement('td');
+                oTd.innerHTML = data[i].sex;
+                oTr.appendChild(oTd);
+
+                oTd = document.createElement('td');
+
+                oTr.appendChild(oTd);
+
+                var oA = document.createElement('a');
+                oA.innerHTML = '删除';
+                oA.href = 'javascript:;';
+                oA.onclick = function () {
+                    oTbody.removeChild( this.parentNode.parentNode);
+                    for (var i = 0; i < oTbody.rows.length; i++) {
+                        if (i%2==0) {
+                            oTbody.rows[i].style.background = 'white';
+                        } else {
+                            oTbody.rows[i].style.background = 'gray';
+                        }
+                    }
+                };
+                oTd.appendChild(oA);
+                oTbody.appendChild(oTr);
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <table id="tab1" width="100%" border="1px">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
