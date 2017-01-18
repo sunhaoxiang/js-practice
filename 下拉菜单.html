@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{width: 100px; height: 200px; border: 1px solid red; display: none;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var oDiv = document.getElementById('div1');
+
+            oBtn.onclick = function (ev) {
+                var ev = ev || event;
+                ev.cancelBubble = true;
+                oDiv.style.display = 'block';
+            };
+
+            oDiv.onclick = function (ev) {
+                var ev = ev || event;
+                ev.cancelBubble = true;
+                oDiv.style.display = 'block';
+            };
+
+            document.onclick = function () {
+                oDiv.style.display = 'none';
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="菜单" id="btn" />
+<div id="div1"></div>
+</body>
+</html>

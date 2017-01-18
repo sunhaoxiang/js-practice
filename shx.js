@@ -107,3 +107,16 @@ function arrIndexOf(arr, v) {
     }
     return -1;
 }
+
+//事件绑定
+function bind() {
+    if (obj.addEventListener) {
+        obj.addEventListener(evname,fn,false);
+    } else {
+        obj.attachEvent('on'+evname,function () {
+            fn.call(obj);
+        })
+    }
+}
+
+bind(document,'click',fn1);
