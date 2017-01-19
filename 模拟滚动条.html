@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{ width: 30px; height: 500px; background: black; position: absolute; left: 10px; top: 10px;}
+        #div2{ width: 30px; height: 30px; background: red; position: absolute; left: 0; top: 0;}
+        #div3{ width: 498px; height: 498px; border: 1px solid green; position: absolute; left: 50px; top: 10px; overflow: hidden;}
+        #div4{ position: absolute; left: 0; top: 0;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+            var oDiv3 = document.getElementById('div3');
+            var oDiv4 = document.getElementById('div4');
+            var iMaxTop = oDiv1.offsetHeight - oDiv2.offsetHeight;
+            
+            oDiv2.onmousedown = function (ev) {
+                var ev = ev || event;
+                var disY = ev.clientY - this.offsetTop;
+
+                document.onmousemove = function (ev) {
+                    var ev = ev || event;
+                    var T = ev.clientY - disY;
+                    if (T < 0) {
+                        T = 0;
+                    } else if (T>iMaxTop) {
+                        T = iMaxTop;
+                    }
+
+                    oDiv2.style.top = T +'px';
+
+                    var iScale = T/iMaxTop;
+                    document.title = iScale;
+                    oDiv4.style.top = (oDiv3.clientHeight - oDiv4.clientHeight) *iScale +'px';
+
+                };
+                
+                document.onmouseup = function () {
+                    document.onmousemove = document.onmouseup = null;
+                };
+
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+<div id="div3">
+    <div id="div4">1月18日，支付宝集五福活动上线，用户AR扫取4次福字（第四次要扫取可口可乐广告图）就会随机四张福，通过好友间的互换集齐五福红包，在1月27日除夕当晚领取。
+        基于去年支付宝的敬业福事件，今年集五福活动把收集门槛降低了N倍，活动仅一天多的时间，截止现在，小楼统计到成功集齐五福的用户有1400多万。
+        这只是活动刚开始，如果到27号除夕当天，会有多少人能集齐，你们自己猜。
+        今年的五福活动和去年相比除了难道降低以为，最大的不同之处在于红包金额的领取规则，去年活动逻辑设定的是平分机制，而今年是随机，所以还在努力收集福字的同学可以歇歇了，按现在收集成功的速度来看，收集福字到最后，领取到的红包金额无非就是块八毛的。
+        以为调低了收集难度就可以获取用户做社交的支付宝还是翻车了。当下互联网用户的挑剔已和多年前完全不一样，无需教育用户，你的产品逻辑与活动形式，他们参与一次就通，所以集五福活动不管是难是易，支付宝最后得到的依旧是一片骂声。
+        为什么多次社交形式下来，支付宝依旧做不好社交？
+        小楼记得2010年的时候，马云曾公开说过：“淘宝就是社交。”所以后来阿里出了一款产品叫“淘江湖”。这个产品可以理解成卖家与买家的一个圈子，算得上是阿里第一次做社交。
+        后来这个产品无疾而终，阿里又投资新浪微博与陌陌，算得上是一次大手笔。但一段时间沉淀下来，阿里应该也发现，其效率还不如自己的产品淘宝客。
+        然后，微信迅速崛起，占领移动端社交市场，各公司大佬们都觉得压力山大时间不多。这时，阿里祭出一击必杀，来往！来往刚上线的时候，算得上是风起云涌，马云在来往上亲自挂帅，各路明星大咖纷纷助阵，一时间注册用户就超过了1000万。
+        记得当时有位朋友和小楼对赌，他看好来往，我看好微信，赌的两年后分别占据的市场份额，其实不用两年，一年就见了分晓。
+        风风火火的来往退出江湖后，阿里又推出了重量级产品“钉钉”。然后钉钉火了，但是这种火的结果只能算是得到B端用户的青睐，钉钉更像是一款高级的CRM，对于C端用户来说，依然是失败的。
+        最后，阿里的社交重担在众望所归的目光中，落在了“支付宝”身上。
+        对于大多数用户而言，对于使用支付宝的需求，除了淘宝购物时付款，就是充值手机话费，再或者用余额宝理理财，使用频率很低，没有社交属性，只是一个生活所需的工具支付宝是一个生活工具，仅此而已。在使用支付宝的时候，我们能看到人与功能的交互，但无法看到人与人的交互。
+        通过这次集五福的活动，我们也能看出这又是一次“无效社交。”
+        用户之所以参与活动，是为了得到最后的红包奖金。在活动进行中，支付宝的使用频率会依次递进，达到顶峰，用户会不断使用支付宝送福互换，但当除夕来临活动结束后呢，不用猜，它的社交属性会瞬间暗淡下来返回到最初的工具属性，但活动的目的却没能达到真正的社交，说白了，都是总额2亿元红包砸出来的，就算是红包金额调整到20亿，结果还是一样。
+        所以小楼才觉得，无论收集“敬业福”是难是易，阿里做社交都输定了。
+        我之前也说过不能说支付宝没有机会，如果厚积薄发、步步为营，相反会有很大的机会。生活中的社交大致就是：相识→交谈→达成交易。
+        我们都知道做社交平台的发展定律：始于约炮，兴于炫耀，衰于鸡汤，亡于电商。想做好一款产品，也也总强调不忘初心，才能看到未来。
+        对于未来的猜想我觉得：社交正在从“以信息分享为中心”向“以交易为中心”的方向做出转变与发展。如果这个猜想正确的话，那么支付宝绝对有得天独厚的优势与当仁不让的地位。</div>
+</div>
+</body>
+</html>
