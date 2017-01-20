@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{ width: 200px;}
+        ul li{ color: #666; background-color: #eee; font-weight: bold; font-size: 14px; height: 30px; line-height: 30px; padding: 0 20px; list-style: none;}
+        ul .focus{ font-size: 22px; background-color: #555; color: #fff;}
+        ul .near{ font-size: 18px; background-color: #ccc; color: blue;}
+        ul .none{ background-color: #333; color: #fff;}
+        ul .side{ background-color: orange;}
+    </style>
+    <script>
+        window.onload = function () {
+            var ul = document.getElementById('ul1');
+            var li = ul.children;
+            var first = ul.firstElementChild;
+            var last = ul.lastElementChild;
+            for (var i = 0; i < li.length; i++) {
+                li[i].onmouseover = function () {
+                    if (this == first || this == last) {
+                        this.className = 'side';
+                    } else {
+                        this.className = 'focus';
+                        this.previousElementSibling.className = 'near';
+                        this.nextElementSibling.className = 'near';
+                        first.className = 'none';
+                        last.className = 'none';
+                    }
+                };
+
+                li[i].onmouseout = function () {
+                    for (var i = 0; i < li.length; i++) {
+                        li[i].className = '';
+                    }
+                    first.className = 'none';
+                    last.className = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li class="none">这是首行</li>
+    <li>11111</li>
+    <li>22222</li>
+    <li>33333</li>
+    <li>44444</li>
+    <li>55555</li>
+    <li>66666</li>
+    <li>77777</li>
+    <li>88888</li>
+    <li>99999</li>
+    <li class="none">这是末行</li>
+</ul>
+</body>
+</html>
