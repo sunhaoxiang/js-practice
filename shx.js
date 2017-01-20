@@ -43,7 +43,7 @@ function toTwo ( n ) {
     return n < 10 ?  '0' + n : '' + n;
 }
 
-//获取绝对位置
+//获取绝对位置  getBoundingClientRect();
 function getPos(obj) {
     var pos = {left:0, top:0};
     while (obj) {

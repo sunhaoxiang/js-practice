@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width:200px;
+            height: 200px;
+            background: red;
+            border:10px solid #00BFFF;
+            padding:5px;
+            margin:10px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var div = document.getElementById('div1');
+            var clientW = document.documentElement.clientWidth;
+            var clientH = document.documentElement.clientHeight;
+            var iW = div.offsetWidth;
+            var iH = div.offsetHeight;
+
+            div.style.left = (clientW - iW)/2 + 'px';
+            div.style.top = (clientH - iH)/2 + 'px';
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
