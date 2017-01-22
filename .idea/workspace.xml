@@ -20,20 +20,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jQuery拖拽.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jQuery拖拽.html">
+      <file leaf-file-name="jQuery选择颜色填充.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jQuery选择颜色填充.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="484">
+              <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jQuery弹窗.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jQuery拖拽.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery拖拽.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jQuery弹窗.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="192">
               <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="81" />
               <folding />
             </state>
@@ -43,8 +53,8 @@
       <file leaf-file-name="jQuery选项卡.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jQuery选项卡.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="81" />
+            <state relative-caret-position="336">
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -68,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/图片切换2/图片切换2.html" />
-        <option value="$PROJECT_DIR$/QQ菜单/QQ菜单.html" />
         <option value="$PROJECT_DIR$/百度文库评分/百度文库评分.html" />
         <option value="$PROJECT_DIR$/getId().html" />
         <option value="$PROJECT_DIR$/return应用.html" />
@@ -119,6 +127,8 @@
         <option value="$PROJECT_DIR$/jQuery选项卡.html" />
         <option value="$PROJECT_DIR$/jQuery弹窗.html" />
         <option value="$PROJECT_DIR$/jQuery拖拽.html" />
+        <option value="$PROJECT_DIR$/.idea/删除指定颜色方块.html" />
+        <option value="$PROJECT_DIR$/jQuery选择颜色填充.html" />
       </list>
     </option>
   </component>
@@ -129,8 +139,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="807" />
-    <option name="y" value="42" />
+    <option name="x" value="798" />
+    <option name="y" value="43" />
     <option name="width" value="1142" />
     <option name="height" value="897" />
   </component>
@@ -153,7 +163,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,6 +177,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,14 +294,15 @@
       <workItem from="1484915219659" duration="2961000" />
       <workItem from="1484964093612" duration="6707000" />
       <workItem from="1484991874747" duration="3779000" />
+      <workItem from="1485047085044" duration="2500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124377000" />
+    <option name="totallyTimeSpent" value="126877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="807" y="42" width="1142" height="897" extended-state="0" />
+    <frame x="798" y="43" width="1142" height="897" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1651865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -323,14 +334,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/抖动.html" />
-    <entry file="file://$USER_HOME$/Desktop/JavaScript基础部分/JS9-定时器管理、函数封装课件/miaov.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/抖动/抖动.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -617,10 +620,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jQuery选项卡.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="81" />
+        <state relative-caret-position="336">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -629,16 +640,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jQuery拖拽.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="216">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
+    <entry file="file://$PROJECT_DIR$/.idea/删除指定颜色方块.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="81" />
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery选择颜色填充.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding />
         </state>
       </provider>

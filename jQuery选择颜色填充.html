@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ width: 100px; height: 100px; border: 1px solid #000; float: left; margin: 10px;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var color = '';
+
+            $('span').click(function () {
+                color = $(this).html();
+            });
+
+            $('div').click(function () {
+                $(this).css('background',color);
+            });
+
+            $('input').click(function () {
+                $('div[style*=red]').css('background','');
+            });
+        });
+    </script>
+</head>
+<body>
+<span>red</span> <span>yellow</span> <span>green</span> <span>blue</span>
+<hr>
+<input type="button" value="清空红色" />
+<br>
+<div></div><div></div><div></div><div></div>
+</body>
+</html>
