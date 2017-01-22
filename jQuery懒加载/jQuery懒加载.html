@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ margin-top:300px; width:470px; height:150px; border:1px #000 solid;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            toChange();
+
+            $(window).scroll(toChange);
+
+            function toChange() {
+                $('img').each(function (i,elem) {
+                    if ($(elem).offset().top < $(window).height() + $(document).scrollTop()) {
+                    $(elem).attr('src',$(elem).attr('_src'));
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div><img _src="img/1.jpg"></div>
+<div><img _src="img/2.jpg"></div>
+<div><img _src="img/3.jpg"></div>
+<div><img _src="img/4.jpg"></div>
+<div><img _src="img/5.jpg"></div>
+</body>
+</html>
