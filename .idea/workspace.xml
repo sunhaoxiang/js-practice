@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6418a5a2-e479-4bdb-a0d2-919deaf48f8d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jQuery选项卡.html" afterPath="$PROJECT_DIR$/jQuery选项卡.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jQuery选择颜色填充.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jQuery抽奖效果.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery抽奖效果.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="888">
+              <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jQuery选择颜色填充.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jQuery选择颜色填充.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="216">
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -43,18 +53,18 @@
       <file leaf-file-name="jQuery弹窗.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="81" />
+            <state relative-caret-position="240">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jQuery选项卡.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jQuery选项卡.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jQuery选项卡.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -78,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/百度文库评分/百度文库评分.html" />
         <option value="$PROJECT_DIR$/getId().html" />
         <option value="$PROJECT_DIR$/return应用.html" />
         <option value="$PROJECT_DIR$/简易计算器.html" />
@@ -124,11 +133,12 @@
         <option value="$PROJECT_DIR$/登录框.html" />
         <option value="$PROJECT_DIR$/cookie.html" />
         <option value="$PROJECT_DIR$/shx.js" />
-        <option value="$PROJECT_DIR$/jQuery选项卡.html" />
         <option value="$PROJECT_DIR$/jQuery弹窗.html" />
         <option value="$PROJECT_DIR$/jQuery拖拽.html" />
         <option value="$PROJECT_DIR$/.idea/删除指定颜色方块.html" />
         <option value="$PROJECT_DIR$/jQuery选择颜色填充.html" />
+        <option value="$PROJECT_DIR$/jQuery抽奖效果.html" />
+        <option value="$PROJECT_DIR$/jQuery选项卡.html" />
       </list>
     </option>
   </component>
@@ -139,8 +149,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="798" />
-    <option name="y" value="43" />
+    <option name="x" value="479" />
+    <option name="y" value="57" />
     <option name="width" value="1142" />
     <option name="height" value="897" />
   </component>
@@ -294,15 +304,15 @@
       <workItem from="1484915219659" duration="2961000" />
       <workItem from="1484964093612" duration="6707000" />
       <workItem from="1484991874747" duration="3779000" />
-      <workItem from="1485047085044" duration="2500000" />
+      <workItem from="1485047085044" duration="6019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126877000" />
+    <option name="totallyTimeSpent" value="130396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="798" y="43" width="1142" height="897" extended-state="1" />
+    <frame x="479" y="57" width="1142" height="897" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1651865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -334,13 +344,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/抖动/抖动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/高亮显示关键字.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -620,24 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jQuery选项卡.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jQuery拖拽.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -654,11 +639,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery弹窗.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jQuery选择颜色填充.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="216">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery抽奖效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery选项卡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

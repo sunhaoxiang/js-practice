@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{ width:328px;}
+        li{ width:100px; height:100px; border:1px #000 solid; float:left; margin-left:5px; list-style:none;}
+        .active{ background:red;}
+    </style>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var iNow = 0;
+
+            $('input').click(function(){
+                var step = parseInt(Math.random() * 20 + 5);
+
+                var timer = setInterval(function(){
+                    $('li').attr('class','');
+                    $('li').eq(iNow).attr('class','active');
+                    iNow++;
+                    step--;
+
+                    if(step==0){
+                        clearInterval(timer);
+                        alert( '您抽到了:' + $('li[class=active]').html() );
+                    }
+
+                    if(iNow == $('li').length){
+                        iNow = 0;
+                    }
+                },100);
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+<input type="button" value="抽奖">
+<ul>
+    <li>1等奖</li>
+    <li>2等奖</li>
+    <li>3等奖</li>
+    <li>4等奖</li>
+    <li>5等奖</li>
+    <li>6等奖</li>
+    <li>7等奖</li>
+    <li>8等奖</li>
+    <li>9等奖</li>
+</ul>
+
+</body>
+</html>

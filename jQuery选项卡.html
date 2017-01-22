@@ -14,7 +14,7 @@
                 $('#div1').find('input').attr('class','');
                 $('#div1').find('div').css('display','none');
                 $(this).attr('class','active');
-                $('#div1').find('div').eq($(this).index()).css('display','block');
+                $('#div1').find('div').eq($(this).index('input')).css('display','block');
             });
         });
     </script>
