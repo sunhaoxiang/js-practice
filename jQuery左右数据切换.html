@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ul1 , #ul2{ width:200px; height:200px; border:1px #000 solid; float:left;}
+        li{ cursor:pointer;}
+        .active{ background:red;}
+        input{ float:left; margin-top:100px;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var $input = $('input');
+
+            $('#ul1').find('li').click(function(){
+                $(this).toggleClass('active');
+            });
+            $('#ul2').find('li').click(function(){
+                $(this).toggleClass('active');
+            });
+
+            $input.eq(0).click(function(){
+
+                $('#ul1').find('li').each(function(){
+                    if( $(this).hasClass('active') ){
+                        $(this).removeClass();
+                        $('#ul2').append( $(this) );
+                    }
+                });
+
+            });
+
+            $input.eq(1).click(function(){
+
+                $('#ul2').find('li').each(function(){
+                    if( $(this).hasClass('active') ){
+                        $(this).removeClass();
+                        $('#ul1').append( $(this) );
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+    <li>5555</li>
+</ul>
+<input type="button" value="→">
+<input type="button" value="←">
+<ul id="ul2">
+    <li>aaaa</li>
+    <li>bbbb</li>
+    <li>cccc</li>
+    <li>dddd</li>
+    <li>eeee</li>
+</ul>
+</body>
+</html>

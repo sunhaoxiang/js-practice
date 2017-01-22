@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('input').click(function () {
+                if ( $(this).val() == '管理员') {
+                    $('#span1').wrap('<a href="#"></a>');
+                } else if ($(this).val() == '普通用户') {
+                    $('#span1').unwrap();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="radio" value="管理员" name="user" checked>管理员
+<input type="radio" name="user" value="普通用户">普通用户
+<br>
+<a href="#"><span id="span1">编辑此处</span></a>
+</body>
+</html>

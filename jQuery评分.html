@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{ float:left; width:50px; height:50px; background:red; margin:5px;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            var bBtn = true;
+
+            $('li').mouseover(function(){
+                if(bBtn){
+                    var index = $(this).index();
+
+                    $('li').each(function(i,elem){
+
+                        if(index>=i){
+                            $(elem).css('background','blue');
+                        }
+                        else{
+                            $(elem).css('background','red');
+                        }
+
+                    });
+                }
+            }).mouseout(function(){
+                if(bBtn){
+                    $('li').css('background','red');
+                }
+            });
+
+
+            $('li').click(function(){
+
+                //$('li').off();
+                bBtn = false;
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+</html>
