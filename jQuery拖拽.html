@@ -8,21 +8,21 @@
     </style>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-        $(function () {
+        $(function(){
             var disX = 0;
             var disY = 0;
 
-            $('div').mousedown(function (ev) {
+            $('div').on('mousedown',function(ev){
                 disX = ev.pageX - $(this).offset().left;
                 disY = ev.pageY - $(this).offset().top;
 
-                $(document).mousemove(function (ev) {
+                $(document).on('mousemove.drag',function(ev){
                     $('div').css('left',ev.pageX - disX);
                     $('div').css('top',ev.pageY - disY);
                 });
-                
-                $(document).mouseup(function () {
-                    $(document).off();
+
+                $(document).on('mouseup.drag',function(){
+                    $(this).off('.drag');
                 });
 
                 return false;
