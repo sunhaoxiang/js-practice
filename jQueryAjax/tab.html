@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 div{ width:200px; height:200px; border:1px #000 solid; display:none;}
+        .active{ background:red;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#div1').find('input').click(function(){
+                var index = $(this).index();
+                $('#div1').find('input').attr('class','');
+                $('#div1').find('div').css('display','none');
+                $(this).attr('class','active');
+                $('#div1').find('div').eq( index ).css('display','block');
+                loadData(index,function(data){
+                    $('#div1').find('div').eq(index).html(data);
+                });
+            });
+
+            loadData(0,function(data){
+                $('#div1').find('div').eq(0).html(data);
+            });
+
+            function loadData(num,fn){
+                $.ajax({
+                    url : 'data.php?num=' + num,
+                    success : function(data){
+                        fn(data);
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="div1">
+    <input class="active" type="button" value="1" />
+    <input type="button" value="2" />
+    <input type="button" value="3" />
+    <div style="display:block">正在加载...</div>
+    <div>正在加载...</div>
+    <div>正在加载...</div>
+</div>
+</body>
+</html>

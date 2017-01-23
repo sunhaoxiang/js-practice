@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#input1').on('input',function(){
+                $.ajax({
+                    url : 'user.php',
+                    data : { user : $(this).val() },
+                    success : function(data){
+
+                        //返回1的时候可以注册 , 返回0的时候不可以注册
+                        if(data == 1){
+                            $('#div1').html('可以注册');
+                        }
+                        else if(data == 0){
+                            $('#div1').html('已经注册过了，不能注册');
+                        }
+                    },
+                    error : function (err) {
+                        console.log(err.status);  //404 500以上服务器错误
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<form action="reg.php">
+    <input id="input1" type="text" name="user" autocomplete="off">
+    <input type="submit" value="注册">
+</form>
+<div id="div1"></div>
+</body>
+</html>
