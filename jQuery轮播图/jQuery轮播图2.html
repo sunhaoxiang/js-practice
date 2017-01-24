@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,ol{margin:0;padding:0;}
+        li{ list-style:none;}
+        img{ border:none; vertical-align:top; }
+        #box{width:470px;height:150px; position:relative; margin:30px auto; overflow:hidden;}
+        ul{ width:470px; position:absolute;left:0; top:0; z-index:1;}
+        ul li{width:470px; position:absolute; top:0;}
+        ol{z-index:2; width:120px; position:absolute;right:10px; bottom:10px;}
+        ol li{ width:20px;height:20px; float:left;margin:0 2px; display:inline; background:#fff; color:#f60; line-height:20px; text-align:center;}
+        ol .active{ background:#f60; color:#fff;}
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $olLi = $('ol li');
+            var $ulLi = $('ul li');
+            var oneWidth = $ulLi.width();
+            var iNow = 0;
+            var timer = null;
+
+            $ulLi.slice(1).each(function () {
+                $(this).css('left',oneWidth);
+            });
+
+            $olLi.mouseover(function () {
+                clearTimeout(timer);
+
+                timer = setTimeout($.proxy(function () {   //修改this指向
+                    var index = $(this).index();
+
+                    $(this).attr('class','active').siblings().attr('class','');
+
+                    if (iNow < index) {
+                        $ulLi.eq($(this).index()).css('left',oneWidth);
+                        $ulLi.eq(iNow).animate({ left : -oneWidth },400);
+                    } else if (iNow > index) {
+                        $ulLi.eq($(this).index()).css('left',-oneWidth);
+                        $ulLi.eq(iNow).animate({ left : oneWidth },400);
+                    }
+
+                    $ulLi.eq($(this).index()).animate({ left : 0 },400);
+
+                    iNow = index;
+                },this),400);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/1.jpg" alt=""/></li>
+        <li><img src="img/2.jpg" alt=""/></li>
+        <li><img src="img/3.jpg" alt=""/></li>
+        <li><img src="img/4.jpg" alt=""/></li>
+        <li><img src="img/5.jpg" alt=""/></li>
+    </ul>
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>

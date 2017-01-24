@@ -21,14 +21,14 @@
                 var timer = setInterval(function(){
                     $('li').attr('class','');
                     $('li').eq(iNow).attr('class','active');
-                    iNow++;
-                    step--;
 
+                    step--;
                     if(step==0){
                         clearInterval(timer);
                         alert( '您抽到了:' + $('li[class=active]').html() );
                     }
 
+                    iNow++;
                     if(iNow == $('li').length){
                         iNow = 0;
                     }

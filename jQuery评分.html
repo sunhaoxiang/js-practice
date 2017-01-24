@@ -8,39 +8,40 @@
     </style>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-        $(function(){
+        $(function () {
 
             var bBtn = true;
+            var timer = null;
 
-            $('li').mouseover(function(){
-                if(bBtn){
+            $('li').mouseover(function () {
+                if (bBtn) {
+                    clearTimeout(timer);
                     var index = $(this).index();
 
-                    $('li').each(function(i,elem){
+                    $('li').each(function (i) {
 
-                        if(index>=i){
-                            $(elem).css('background','blue');
+                        if (index >= i) {
+                            $(this).css('background', 'blue');
                         }
-                        else{
-                            $(elem).css('background','red');
+                        else {
+                            $(this).css('background', 'red');
                         }
 
                     });
                 }
-            }).mouseout(function(){
-                if(bBtn){
-                    $('li').css('background','red');
+
+            }).mouseout(function () {
+                if (bBtn) {
+                    timer = setTimeout(function () {
+                        $('li').css('background', 'red');
+                    }, 100);
                 }
-            });
 
+            }).click(function () {
 
-            $('li').click(function(){
-
-                //$('li').off();
                 bBtn = false;
 
             });
-
         });
     </script>
 </head>

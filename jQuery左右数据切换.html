@@ -12,35 +12,12 @@
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $(function(){
-
-            var $input = $('input');
-
-            $('#ul1').find('li').click(function(){
-                $(this).toggleClass('active');
-            });
-            $('#ul2').find('li').click(function(){
+            $('li').click(function(){
                 $(this).toggleClass('active');
             });
 
-            $input.eq(0).click(function(){
-
-                $('#ul1').find('li').each(function(){
-                    if( $(this).hasClass('active') ){
-                        $(this).removeClass();
-                        $('#ul2').append( $(this) );
-                    }
-                });
-
-            });
-
-            $input.eq(1).click(function(){
-
-                $('#ul2').find('li').each(function(){
-                    if( $(this).hasClass('active') ){
-                        $(this).removeClass();
-                        $('#ul1').append( $(this) );
-                    }
-                });
+            $('input').click(function(){
+                $($(this).attr('from')).find('.active').appendTo( $($(this).attr('to')) ).removeClass('active');
             });
         });
     </script>
@@ -53,8 +30,8 @@
     <li>4444</li>
     <li>5555</li>
 </ul>
-<input type="button" value="→">
-<input type="button" value="←">
+<input type="button" value="→" from="#ul1" to="#ul2">
+<input type="button" value="←" from="#ul2" to="#ul1">
 <ul id="ul2">
     <li>aaaa</li>
     <li>bbbb</li>
