@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #q { width: 300px; height: 30px; padding: 5px; border: 1px solid #f90; font-size: 16px;}
+        #ul1 { display: none; border: 1px solid #f90; width: 310px; margin: 0; padding: 0;}
+        li a { display: block; line-height: 30px; padding: 5px; text-decoration: none; color: #000;}
+        li a:hover{ background: #f90; color: #fff;}
+    </style>
+    <script>
+        function baidu(data) {
+            var oUl = document.getElementById('ul1');
+            var html = '';
+            if (data.s.length) {
+                oUl.style.display = 'block';
+                for (var i = 0; i < data.s.length; i++) {
+                    html += '<li><a target="_blank" href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+                }
+                oUl.innerHTML = html;
+            }
+        }
+        window.onload = function () {
+            var oQ = document.getElementById('q');
+            var oUl = document.getElementById('ul1');
+            
+            oQ.oninput = function () {
+                if (this.value != '') {
+                    var oScript = document.createElement('script');
+                    oScript.src = 'http://suggestion.baidu.com/su?wd='+this.value+'&cb=baidu';
+                    document.body.appendChild(oScript);
+                } else {
+                    oUl.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="q" />
+<ul id="ul1"></ul>
+</body>
+</html>
