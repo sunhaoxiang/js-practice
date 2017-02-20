@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#q {width: 300px; height: 30px; padding: 5px; border:1px solid #f90; font-size: 16px;}
+dl {border-bottom: 1px dotted #000;}
+dt {font-weight: bold;}
+</style>
+<script>
+function fn1(data) {
+
+	var oMsg = document.getElementById('msg');
+	var oList = document.getElementById('list');
+	
+	oMsg.innerHTML = data.title.$t + ' : ' + data['opensearch:totalResults'].$t;
+	
+	var aEntry = data.entry;
+	var html = '';
+	for (var i=0; i<aEntry.length; i++) {
+		
+		html += '<dl><dt>'+ aEntry[i].title.$t +'</dt><dd><img src="'+ aEntry[i].link[2]['@href'] +'" /></dd></dl>';
+		
+	}
+	
+	oList.innerHTML = html;
+	
+}
+window.onload = function() {
+	
+	var oQ = document.getElementById('q');
+	var oBtn = document.getElementById('btn');
+	var oMsg = document.getElementById('msg');
+	var oList = document.getElementById('list');
+	
+	oBtn.onclick = function() {
+
+		if ( oQ.value != '' ) {
+			var oScript = document.createElement('script');
+			oScript.src = 'http://api.douban.com/book/subjects?q='+oQ.value+'&alt=xd&callback=fn1';
+			document.body.appendChild(oScript);
+		}
+		
+	}
+	
+}
+</script>
+</head>
+
+<body>
+	<input type="text" id="q" /><input type="button" id="btn" value="搜索" />
+    <p id="msg"></p>
+    <hr />
+	<div id="list"></div>
+</body>
+</html>
